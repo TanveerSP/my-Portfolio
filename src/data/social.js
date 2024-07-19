@@ -24,7 +24,7 @@ const socialLinks = [
         child: (<>
             <IoIosMail className='text-[#e698c3] ' size={25} />
         </>),
-        href: 'mailto:tspathan012@gmail.com',
+        href: 'mailto:tanveerpathan.work@gmail.com',
     },
 ]
-export default  socialLinks
+export default socialLinks
