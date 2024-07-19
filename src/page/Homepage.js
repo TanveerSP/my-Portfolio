@@ -23,7 +23,7 @@ const Homepage = ({ index }) => {
     }, []);
 
     return (
-        <div className='mt-14 z-40'>
+        <div className=' z-40'>
 
 
            <HeroSection />
