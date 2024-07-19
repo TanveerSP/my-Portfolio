@@ -8,7 +8,7 @@ const HeroSection = ({ index }) => {
   return (
     <div className=' flex flex-col-reverse lg:flex-row md:flex-row items-center justify-center gap-2 w-[70vw] mx-auto my-20  '>
 
-      <div className=' flex flex-col  justify-between py-8  mx-auto'>
+      <div className=' flex flex-col  justify-between py-8 gap-2  mx-auto'>
         <div data-aos="fade-right" data-aos-delay={index * 100} >
           <p className='text-gradient-heading text-4xl font-bold text-center md:text-start lg:text-start '>
             Hi, Im Tanveer Pathan
@@ -16,7 +16,7 @@ const HeroSection = ({ index }) => {
         </div>
         <div data-aos="fade-right" data-aos-delay={index * 100} className='flex flex-col gap-y-1 mb-10'>
           <p className="text-2xl font-medium tracking-tighter text-richblack-3 max-w-[600px] text-center md:text-start lg:text-start ">
-            I am MERN stack developer {" "} 🚀
+            MERN stack developer {" "} 🚀
           </p>
           <p className="text-md max-w-[600px] text-richblack-4">
             Currently I love working on web applications using technologies like React.js, Express, Node.js, Tailwind, and Bootstrap. I demonstrate mastery in JavaScript and back-end functionality,
