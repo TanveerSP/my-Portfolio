@@ -1,0 +1,20 @@
+<motion.div id='Skills' style={{ y: y2 }} className='bg-white text-[#444]'>
+                            <div className='my-10'>
+                                <h1 className='py-10'>
+                                    Skills
+                                </h1>
+                                <p>
+                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                                    Mollitia eveniet perspiciatis, quis reiciendis asperiores perferendis
+                                    rem. Distinctio, dolore! Similique culpa dignissimos qui sapiente eveniet
+                                    quod sit numquam ex fugit ea. Omnis earum quaerat a deleniti est quis
+                                    modi, similique eius quos vel sit, accusantium veniam, in ipsa repellat
+                                    rerum. Quidem harum eum dolorem, quia officia, iste praesentium
+                                    assumenda et soluta placeat porro recusandae ea, laudantium minima
+                                    nihil veniam. Quas aut et impedit, similique, commodi culpa aperiam
+                                    fuga ex unde vel at voluptatibus provident id tempora quo quod alias soluta vero. At deserunt ipsam veritatis eius quis porro, atque autem repellendus?
+                                </p>
+                            </div>
+                        </motion.div>
+
+

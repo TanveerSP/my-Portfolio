@@ -1,0 +1,93 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Plaster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+.parallax {
+  overflow: hidden;
+  letter-spacing: -2px;
+  line-height: 0.8;
+  margin: 0;
+  white-space: nowrap;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.parallax .scroller {
+  font-weight: 400;
+  /* text-transform: uppercase; */
+  font-size: 100px;
+  display: flex;
+  white-space: nowrap;
+  display: flex;
+  flex-wrap: nowrap;
+  color: #ffffff;
+
+}
+
+.parallax span {
+  display: block;
+  margin-right: 30px;
+}
+
+/* bg imgage */
+.homepage_bg {
+  background-image: url("./assets//myImage.jpg");
+}
+
+.mainscreen_bg {
+  background-image: url("./assits2/LooperGroup2.png");
+  background-repeat: no-repeat;
+  align-items:center;
+}
+
+.neumorphisum_bg {
+  border-radius: 30px;
+  background: linear-gradient(145deg, #191a1d, #1e1f22);
+  box-shadow: 12px 12px 24px #141517,
+    -12px -12px 24px #242529;
+}
+
+/* hand emoji sheking */
+@keyframes shake {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  25% {
+    transform: rotate(10deg);
+  }
+
+  50% {
+    transform: rotate(0deg);
+  }
+
+  75% {
+    transform: rotate(-10deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.shake-emoji {
+  display: inline-block;
+  animation: shake 0.5s infinite;
+}
+
+.skills_bg {
+  border-radius: 43px;
+  background: #171717;
+  box-shadow: 36px 36px 72px #0c0c0c,
+    -36px -36px 72px #222222;
+}
+
+/* ============================= */
