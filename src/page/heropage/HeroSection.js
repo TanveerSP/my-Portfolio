@@ -26,7 +26,7 @@ const HeroSection = ({ index }) => {
 
         {/* Button */}
         <div data-aos="fade-right" data-aos-delay={index * 100}
-          className="text-md  flex justify-between py-1">
+          className="text-md  flex flex-col items-center lg:flex-row md:flex-row justify-center  gap-4 py-1">
           <GetTouchBtn />
 
           <CVButton />
