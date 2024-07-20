@@ -36,10 +36,9 @@ const Navbar = () => {
     };
 
     const links = [
-        // { id: 1, title: 'Home', target: 'home' },
-        { id: 1, title: 'Skills', target: 'skills' },
-        { id: 2, title: 'works', target: 'works' },
-        { id: 3, title: 'about', target: 'about' },
+        { id: 1, title: 'Hero', target: 'hero' },
+        { id: 2, title: 'Skills', target: 'skills' },
+        { id: 3, title: 'works', target: 'works' },
         { id: 4, title: 'contact', target: 'contact' },
     ];
 
@@ -53,7 +52,7 @@ const Navbar = () => {
                     </div>
                 </Link>
 
-                <nav className='lg:inline-block hidden'>
+                <nav className=''>
                     <ul className='flex gap-x-6 text-richblack-1 hover:cursor-pointer'>
                         {links.map(link => (
                             <li key={link.id}
@@ -64,31 +63,6 @@ const Navbar = () => {
                         ))}
                     </ul>
                 </nav>
-
-                <div className={`inline-block lg:hidden`}>
-                    <button
-                        className='w-8 h-5 flex flex-col justify-between z-50 relative'
-                        onClick={() => setOpen((prev) => !prev)}
-                    >
-                        {/* Menu button */}
-                        <div className='w-8 h-1 bg-richblack-3 rounded-lg'></div>
-                        <div className='w-8 h-1 bg-richblack-3 rounded-lg'></div>
-                        <div className='w-8 h-1 bg-richblack-3 rounded-lg'></div>
-                    </button>
-                    {/* Menu list */}
-                    <motion.div
-                        className='absolute top-0 right-0 w-[50vw] h-screen bg-richblack-10 text-richblack-1 flex flex-col items-center justify-center gap-8 text-4xl shadow-lg'
-                        initial={false}
-                        animate={open ? 'open' : 'closed'}
-                        variants={variants}
-                        transition={transition}
-                        style={{ pointerEvents: open ? 'auto' : 'none' }}
-                    >
-                        {links.map((link => (
-                            <Link to={link.url}>{link.title}</Link>
-                        )))}
-                    </motion.div>
-                </div>
             </div>
         </div>
     )

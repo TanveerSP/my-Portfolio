@@ -5,7 +5,7 @@ import Me from '../../assets/images/Me.png'
 
 const HeroSection = ({ index }) => {
   return (
-    <div className=' flex flex-col-reverse lg:flex-row md:flex-row items-center justify-center gap-2 w-[70vw] mx-auto mt-20  '>
+    <div id='hero' className=' flex flex-col-reverse lg:flex-row md:flex-row items-center justify-center gap-2 w-[70vw] mx-auto mt-20  '>
 
       <div className=' flex flex-col  justify-between py-8 gap-2  mx-auto'>
         <div data-aos="fade-right"  >

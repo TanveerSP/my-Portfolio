@@ -3,7 +3,7 @@ import GetTouchBtn from '../../components/common/GetTouchBtn'
 
 export const Contact = () => {
     return (
-        <div id='works' data-aos="fade-up" className="w-11/12 mx-auto flex flex-col items-center justify-center py-2 mb-24">
+        <div id='contact' data-aos="fade-up" className="w-11/12 mx-auto flex flex-col items-center justify-center py-2 mb-24">
             <p className=' text-center text-richblack-1 text-3xl font-bold tracking-tighter sm:text-5xl'>
                 Get In Touch
             </p>
