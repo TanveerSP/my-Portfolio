@@ -52,7 +52,7 @@ const Navbar = () => {
                     </div>
                 </Link>
 
-                <nav className=''>
+                <nav className='lg:inline-block hidden'>
                     <ul className='flex gap-x-6 text-richblack-1 hover:cursor-pointer'>
                         {links.map(link => (
                             <li key={link.id}
