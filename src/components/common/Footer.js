@@ -1,16 +1,14 @@
 import React from 'react'
-import GetTouchBtn from './GetTouchBtn'
+
 
 const Footer = () => {
   return (
-    <div className=' w-[70vw] bg-none bg-opacity-10 backdrop-blur-sm border-[1px] border-richblack-8 mx-auto rounded-full mb-4'>
-        <div className='flex gap-3 justify-between py-4 px-5'>
-          <div></div>
-          <div></div>
-          <div>
-            <GetTouchBtn />
-          </div>
-        </div>
+    <div className=' w-full bg-richblack-10 mx-auto '>
+      <div className='  text-center pb-4 pt-6  '>
+        <p className=' text-richblack-4 font-inter'>
+          ©2024 Made ❤️ by Tanveer Pathan
+        </p>
+      </div>
     </div>
   )
 }

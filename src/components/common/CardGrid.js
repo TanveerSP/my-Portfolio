@@ -1,19 +1,19 @@
 import React from 'react';
 import Card from './Card';
-import projects from '../../data/projects';
+import { projects } from '../../data/projects';
 
 const CardGrid = () => {
     return (
-        <div className="w-[600px] mx-auto py-2 rounded-md ">
-            <div className=" grid place-items-center grid-cols-1 grid-rows-2 sm:grid-cols-2 lg:grid-cols-2 gap-2">
-                {projects.slice(0, 4).map((projects, index) => (
+        <div className="container mx-auto p-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                {projects.map((project, index) => (
                     <Card
                         key={index}
-                        image={projects.image}
-                        title={projects.title}
-                        description={projects.description}
-                        demoLink={projects.demoLink}
-                        codeLink={projects.codeLink}
+                        image={project.image}
+                        title={project.title}
+                        description={project.description}
+                        demoLink={project.demoLink}
+                        codeLink={project.codeLink}
                     />
                 ))}
             </div>

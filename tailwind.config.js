@@ -83,6 +83,9 @@ module.exports = {
         800: "#41260B",
         900: "#291100",
       },
+      facebookblue: {
+        5:"#1877F2"
+      },
       pink: {
         5: "#FFF1F1",
         25: "#FBC7D1",

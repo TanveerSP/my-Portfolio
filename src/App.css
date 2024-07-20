@@ -37,13 +37,9 @@ body {
   margin-right: 30px;
 }
 
-/* bg imgage */
-.homepage_bg {
-  background-image: url("./assets//myImage.jpg");
-}
 
 .mainscreen_bg {
-  background-image: url("./assits2/LooperGroup2.png");
+  background-image: url("./assets/images/LooperGroup2.png");
   background-repeat: no-repeat;
   align-items:center;
 }

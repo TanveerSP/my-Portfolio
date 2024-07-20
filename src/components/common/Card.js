@@ -1,142 +1,62 @@
-import React from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
-import 'swiper/css/free-mode';
-import 'swiper/css/pagination';
-import { Autoplay, FreeMode, Pagination } from 'swiper/modules';
-import { projects } from '../../data/projects';
-import { FaAngleRight } from "react-icons/fa";
+import React, { useState } from 'react';
+import { projects } from '../../data/projects'
+import { Link } from 'react-router-dom';
+import { FaAngleRight } from "react-icons/fa6";
+import { FaGithub } from "react-icons/fa";
 
-const CardSlider = () => {
+const Card = () => {
 
-    const truncate = (text, length) => {
-        if (text.length <= length) {
-          return text;
-        }
-        return text.slice(12, length) + '...';
-      };
+  const [expandedIndex, setExpandedIndex] = useState(null);
 
-            return (
-                <div className='py-2 px-3'>
-                <Swiper
-                  spaceBetween={30}
-                  slidesPerView={1}
-                  navigation
-                  pagination={{ clickable: true }}
-                  breakpoints={{
-                    640: {
-                      slidesPerView: 2,
-                    },
-                    768: {
-                      slidesPerView: 2,
-                    },
-                    1024: {
-                      slidesPerView: 4,
-                    },
-                  }}
-                  freeMode={true}
-                  loop={true}
-                  autoplay={{
-                    delay: 2500,
-                    disableOnInteraction: false,
-                  }}
-                  modules={[FreeMode, Autoplay]}
-                  className='w-full'
-                >
-                  {projects.map(project => (
-                    <SwiperSlide key={project.id}>
-                      <Card className="w-full max-w-sm rounded-lg overflow-hidden shadow-lg border-[1px] border-richblack-7 mx-auto">
-                        <img
-                          src={project.image}
-                          alt={project.title}
-                          className="w-full h-49 object-cover "
-                        />
-                        <CardContent className="p-6 space-y-4 bg-richblack-1 bg-opacity-10 backdrop-blur-sm">
-                          <div>
-                            <CardTitle className="text-xl font-semibold text-richblack-2">
-                              {project.title}
-                            </CardTitle>
-                            <CardDescription className="text-muted-foreground text-richblack-3">
-                              {truncate(project.description, 100)}
-                            </CardDescription>
-                            {project.description.length > 200 && (
-                              <Link
-                                href={project.demoLink}
-                                className="text-sm font-medium text-primary hover:underline"
-                              >
-                                Read More
-                              </Link>
-                            )}
-                          </div>
-                          <Link
-                            href={project.demoLink}
-                            className="inline-flex h-9 items-center bg-richblack-10 justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-richblack-5 border-[1px] border-richblack-5  shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
-                            prefetch={false}
-                          >
-                            View Project <FaAngleRight className='text-richblack-1' size={20}/>
-                          </Link>
-                        </CardContent>
-                      </Card>
-                    </SwiperSlide>
-                  ))}
-                </Swiper>
+  const handleToggleExpand = (index) => {
+    setExpandedIndex(expandedIndex === index ? null : index);
+  };
+
+  return (
+    <div className='w-11/12 mx-auto py-10 mt-14'>
+      <div className='grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-14 w-full'>
+        {projects.map((item, ind) => (
+          <div
+            key={ind}
+            className={`border-[1px] border-richblack-8 rounded-xl flex flex-col transition-all ease-in-out ${expandedIndex === ind ? 'h-[600px]' : 'h-[400px]'} overflow-hidden`}
+          >
+            <div className='rounded-t-2xl overflow-hidden object-cover '>
+              <img src={item.image} alt={item.title} className='object-cover transition-all ease-in-out hover:scale-110 w-full h-full' />
+            </div>
+
+            <div className='rounded-b-2xl flex flex-col px-4 py-1 bg-black border-t-[1px] border-richblack-8 z-10 flex-grow'>
+              <div className='flex flex-col py-4 flex-grow'>
+                <p className='text-richblack-1 font-semibold text-lg mb-2'>{item.title}</p>
+                <p className='text-richblack-2 mb-2 flex-grow overflow-hidden'>
+                  {expandedIndex === ind ? item.description : item.description.length > 100 ? (
+                    <>
+                      {item.description.substring(0, 100)}... <button onClick={() => handleToggleExpand(ind)} className='text-facebookblue-5'>Read More</button>
+                    </>
+                  ) : (
+                    item.description
+                  )}
+                  {expandedIndex === ind ? (
+                    <button onClick={() => handleToggleExpand(ind)} className=' text-facebookblue-5'>Less</button>
+                  ) : null}
+                </p>
               </div>
-          );
-        };
-        
-        const Card = ({ children, className }) => (
-          <div className={className}>
-            {children}
+              <div className='flex items-center justify-start gap-2 py-3  border-t-[1px] border-richblack-8'>
+
+                <Link to={item.codeLink} className='text-richblack-10 px-2 gap-1 rounded-lg  flex  items-center bg-white '>
+                  <FaGithub size={15} className='transition-all ease-in-out hover:scale-110' />
+                  <span className='font-semibold'>Code</span>
+                </Link>
+                <Link to={item.demoLink} className='text-richblack-10 px-2 rounded-lg  flex  items-center bg-white '>
+                  <span className='font-semibold'>Demo</span>
+                  <FaAngleRight size={15} className='transition-all ease-in-out hover:scale-110' />
+                </Link>
+              </div>
+            </div>
           </div>
-        );
-        
-        const CardContent = ({ children, className }) => (
-          <div className={className}>
-            {children}
-          </div>
-        );
-        
-        const CardTitle = ({ children, className }) => (
-          <h3 className={className}>
-            {children}
-          </h3>
-        );
-        
-        const CardDescription = ({ children, className }) => (
-          <p className={className}>
-            {children}
-          </p>
-        );
-        
-        const Link = ({ href, children, className, prefetch }) => (
-          <a href={href} className={className}>
-            {children}
-          </a>
-        );
-    
+        ))}
+      </div>
+    </div>
+  )
+}
 
-
-export default CardSlider;
-
-// mx-8 neumorphisum_bg my-4
-       
-            // <div className="max-w-sm bg-richblack-10 bg-opacity-10 backdrop-blur-md rounded-lg shadow border-[1px] border-richblack-8">
-
-            //     <img className="rounded-t-lg" src={image} alt={title} />
-
-            //     <div className="p-5">
-            //         <a href={demoLink}>
-            //             <h5 className="mb-2 text-2xl font-bold tracking-tight text-white">{title}</h5>
-            //         </a>
-            //         <p className="mb-3 font-normal text-richblack-4">{description}</p>
-
-            //         {/* Buttons */}
-            //         <div className='flex items-center justify-between'>
-            //             <a href={demoLink} target="_blank" rel="noopener noreferrer"
-            //                 className="inline-flex items-center px-3 py-2 gap-2 text-sm font-semibold text-center text-white bg-[#1b4332] rounded-lg hover:bg-[#143326] focus:ring-2 focus:outline-none focus:ring-[#214b39] ">
-            //                 Get Demo
-            //                 <FaArrowUpRightFromSquare size={15} />
-            //             </a>
-            //         </div>
-            //     </div>
-            // </div>
+export default Card
