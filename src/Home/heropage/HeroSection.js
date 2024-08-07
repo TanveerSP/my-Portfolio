@@ -1,13 +1,12 @@
 import React from 'react'
 import CVButton from '../../components/common/CVButton'
-import GetTouchBtn from '../../components/common/GetTouchBtn'
 import Me from '../../assets/images/Me.png'
 import SocialBar from '../../components/core/SocialBar'
 import HighlightText from '../../components/core/HighlightText'
 
 const HeroSection = ({ index }) => {
   return (
-    <div className='w-full mt-20'>
+    <div className='w-full mt-20'id='home'>
       <div className='w-11/12 mx-auto flex flex-col-reverse items-center justify-center gap-5 lg:flex-row md:flex-row'>
 
         <div className='flex flex-col items-start h-[300px] px-4 py-5 bg-richblack-1 bg-opacity-5 backdrop-blur-lg rounded-3xl border-[1px] border-richblack-8'>
