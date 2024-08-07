@@ -46,7 +46,7 @@ const Works = () => {
         </div>
         <Link to="/projects" className='mt-4'>
           <button
-            className='flex items-center gap-1 py-3 px-6 bg-black border-[1px] border-richblack-1 rounded-2xl transition-all ease-in-out hover:scale-90 font-semibold text-richblack-1' 
+            className='flex items-center gap-1 py-3 px-6 bg-black bg-opacity-10 backdrop-blur-lg border-[1px] border-richblack-1 rounded-2xl transition-all ease-in-out hover:scale-90 font-semibold text-richblack-1' 
           >
             More Works <span><FaChevronRight /></span>
           </button>
