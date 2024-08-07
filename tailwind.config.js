@@ -14,6 +14,10 @@ module.exports = {
       white: "#fff",
       black: "#000",
       transparent: "#ffffff00",
+      webcolor: {
+        3: "#384B73",
+        5: "#111827",
+      },
       richblack: {
         1: "#f8f9fa",
         2: "#e9ecef",

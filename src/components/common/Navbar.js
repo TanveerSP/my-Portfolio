@@ -43,7 +43,7 @@ const Navbar = () => {
     ];
 
     return (
-        <div className={`md:fixed flex sm:relative bg-none bg-opacity-10 backdrop-blur-sm w-screen relative z-50 h-16 items-center justify-center border-b-[1px] border-b-richblack-7 translate-y-  transition-all duration-500`}>
+        <div className={`md:fixed flex sm:relative bg-black bg-opacity-10 backdrop-blur-sm w-screen relative z-50 h-16 items-center justify-center border-b-[1px] border-b-richblack-7 translate-y-  transition-all duration-500`}>
             <div className='flex w-11/12 max-w-maxContent items-center justify-between'>
                 <Link to="/">
                     <div className=' text-[18px] text-richblack-1'>

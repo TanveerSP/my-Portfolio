@@ -8,12 +8,10 @@ import MoreWorks from './page/MoreWorks';
 
 function App() {
   return (
-    <div className=' relative w-screen min-h-screen max-w-[100vw] bg-black flex flex-col font-inter'>
-      <Navbar />
-      <div className=' fixed lg:top-36 lg:left-3 lg:translate-x-0  bottom-0 left-1/2 transform -translate-x-1/2 z-50'>
-        <StickFooter />
-      </div>
+    <div className=' relative w-screen min-h-screen max-w-[100vw] bg-webcolor-5 flex flex-col font-inter'>
 
+
+      <Navbar />
       <Routes>
         {/* Home Page Route */}
         <Route path='/' element={<Homepage />} />

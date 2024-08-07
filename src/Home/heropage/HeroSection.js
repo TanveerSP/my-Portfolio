@@ -2,47 +2,38 @@ import React from 'react'
 import CVButton from '../../components/common/CVButton'
 import GetTouchBtn from '../../components/common/GetTouchBtn'
 import Me from '../../assets/images/Me.png'
+import SocialBar from '../../components/core/SocialBar'
+import HighlightText from '../../components/core/HighlightText'
 
 const HeroSection = ({ index }) => {
   return (
-    <div id='hero' className=' flex flex-col-reverse lg:flex-row md:flex-row items-center justify-center gap-2 w-[70vw] mx-auto mt-20  '>
+    <div className='w-full mt-20'>
+      <div className='w-11/12 mx-auto flex flex-col-reverse items-center justify-center gap-5 lg:flex-row md:flex-row'>
 
-      <div className=' flex flex-col  justify-between py-8 gap-2  mx-auto'>
-        <div data-aos="fade-right"  >
-          <p className='text-gradient-heading text-4xl font-bold text-center md:text-start lg:text-start '>
-            Hi, Im Tanveer Pathan
-          </p>
-        </div>
-        <div data-aos="fade-right" className='flex flex-col gap-y-1 mb-10'>
-          <p className="text-2xl font-medium tracking-tighter text-richblack-3 max-w-[600px] text-center md:text-start lg:text-start ">
-            MERN stack developer {" "} 🚀
-          </p>
-          <p className="text-md max-w-[600px] text-richblack-4">
+        <div className='flex flex-col items-start h-[300px] px-4 py-5 bg-richblack-5 bg-opacity-10 backdrop-blur-sm rounded-3xl border-[1px] border-richblack-5'>
+          <div className='mt-4 mb-4'>
+            <p className='text-2xl lg:text-5xl font-bold text-white'>
+              Hey! there
+            </p>
+            <div className='text-white text-start flex gap-1 items-center text-2xl lg:text-5xl font-bold'>
+              I'm <HighlightText text={"Tanveer Pathan"} />
+            </div>
+          </div>
+          <div className='max-w-[400px] text-white font-inter'>
             Currently I love working on web applications using technologies like React.js, Express, Node.js, Tailwind, and Bootstrap. I demonstrate mastery in JavaScript and back-end functionality,
             and have a strong track record in effective problem-solving.
-          </p>
+          </div>
         </div>
 
-        {/* Button */}
-        <div data-aos="fade-right"
-          className="text-md  flex flex-col items-center lg:flex-row md:flex-row justify-center gap-4">
-          <GetTouchBtn />
-
+        <div className='flex flex-col items-center h-[300px] gap-4 py-5 px-5 bg-richblack-5 bg-opacity-10 backdrop-blur-sm rounded-3xl border-[1px] border-richblack-5'>
+          <img src={Me} alt="tanveer" height={50} width={100} />
+          <p className='text-white text-xl font-semibold text-center'>
+            Tanveer Pathan
+          </p>
+          <SocialBar />
           <CVButton />
         </div>
-      </div>
-      <div data-aos="fade-left"
-        className=' flex flex-col py-4 px-4 gap-8 mx-auto'>
-        <div className="justify-center flex">
-          <img
-            priority
-            src={Me}
-            height={250}
-            width={250}
-            alt="Tanveer Pathan"
-            className='border-[3px] border-richblack-1 rounded-full'
-          />
-        </div>
+
       </div>
     </div>
   )
