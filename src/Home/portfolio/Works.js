@@ -23,7 +23,7 @@ const Works = () => {
                 />
               </div>
 
-              <div className=' rounded-b-2xl flex py-3 px-4 items-center justify-between bg-richblack-10 z-10 '>
+              <div className=' rounded-b-xl flex py-3 px-4 items-center justify-between bg-webcolor-3 z-10 '>
                 <p className='text-richblack-4 font-semibold text-xl '>
                   {item.title}
                 </p>

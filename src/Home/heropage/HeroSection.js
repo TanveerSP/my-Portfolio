@@ -25,7 +25,7 @@ const HeroSection = ({ index }) => {
           </div>
         </div>
 
-        <div className='flex flex-col items-center w-[30vw] h-[300px] gap-4 py-5 px-5 bg-richblack-1 bg-opacity-5 backdrop-blur-lg rounded-3xl border-[1px] border-richblack-8'>
+        <div className='flex flex-col items-center w-[300px] h-[300px] gap-4 py-5 px-5 bg-richblack-1 bg-opacity-5 backdrop-blur-lg rounded-3xl border-[1px] border-richblack-8'>
           <img src={Me} alt="tanveer" height={50} width={100} />
           <p className='text-white text-xl font-semibold text-center'>
             Tanveer Pathan
