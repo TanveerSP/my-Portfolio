@@ -10,7 +10,7 @@ const HeroSection = ({ index }) => {
     <div className='w-full mt-20'>
       <div className='w-11/12 mx-auto flex flex-col-reverse items-center justify-center gap-5 lg:flex-row md:flex-row'>
 
-        <div className='flex flex-col items-start h-[300px] px-4 py-5 bg-richblack-5 bg-opacity-10 backdrop-blur-sm rounded-3xl border-[1px] border-richblack-5'>
+        <div className='flex flex-col items-start h-[300px] px-4 py-5 bg-richblack-1 bg-opacity-5 backdrop-blur-lg rounded-3xl border-[1px] border-richblack-8'>
           <div className='mt-4 mb-4'>
             <p className='text-2xl lg:text-5xl font-bold text-white'>
               Hey! there
@@ -25,7 +25,7 @@ const HeroSection = ({ index }) => {
           </div>
         </div>
 
-        <div className='flex flex-col items-center h-[300px] gap-4 py-5 px-5 bg-richblack-5 bg-opacity-10 backdrop-blur-sm rounded-3xl border-[1px] border-richblack-5'>
+        <div className='flex flex-col items-center h-[300px] gap-4 py-5 px-5 bg-richblack-1 bg-opacity-5 backdrop-blur-lg rounded-3xl border-[1px] border-richblack-8'>
           <img src={Me} alt="tanveer" height={50} width={100} />
           <p className='text-white text-xl font-semibold text-center'>
             Tanveer Pathan

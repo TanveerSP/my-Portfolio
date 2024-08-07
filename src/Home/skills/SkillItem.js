@@ -8,7 +8,7 @@ const SkillItem = ({ category, items, index }) => {
         <div
             data-aos="fade-right"
             data-aos-delay={index * 100}
-            className="py-4 border-[1px] border-richblack-8 rounded-xl px-5 my-4 bg-richblack-3 bg-opacity-10 backdrop-blur-sm">
+            className="py-4 border-[1px] border-richblack-8 rounded-xl px-5 my-4 bg-richblack-1 bg-opacity-5 backdrop-blur-lg">
             <button
                 className="w-full flex justify-between items-center text-left focus:outline-none"
                 onClick={() => setIsOpen(!isOpen)}
